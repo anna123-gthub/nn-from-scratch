@@ -36,3 +36,14 @@ The test set has 360 images, so differences of about 1% are within noise. Learni
 - Train on full MNIST (28x28)
 - Add dropout and L2 regularization
 - Learning-rate schedule
+## Results on full MNIST (28x28)
+784-128-10 network, Adam (lr 1e-3), batch size 128, 10 epochs, about 55 s on a laptop CPU.
+
+| Split | Accuracy |
+|-------|----------|
+| Validation (5,000 held out from train) | 98.1% |
+| Test (10,000 images, evaluated once) | 97.8% |
+
+![mnist curves](mnist_curves.png)
+
+Run: `python train_mnist.py` (needs `pandas`; the first run downloads MNIST).
